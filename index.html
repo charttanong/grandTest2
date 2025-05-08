@@ -1,0 +1,2224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Grand Dragon</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Teko:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+
+
+    <style>
+        @keyframes scaleUp {
+            0% {
+                transform: translateX(-50%) scale(0);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateX(-50%) scale(1);
+                opacity: 1;
+            }
+        }
+
+
+
+        .navbar-custom {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+
+            width: 90%;
+            max-width: 1125px;
+            background: linear-gradient(0deg, #014263, #3889b9);
+            /* Example gradient */
+
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 8px 20px;
+            border-radius: 50px;
+            border: 0px solid #ffffff;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            animation: scaleUp 2s ease-out forwards;
+            z-index: 9999;
+        }
+
+        /* Responsive padding for small screens */
+        @media (max-width: 991px) {
+            .navbar-custom {
+                padding: 5px 12px;
+            }
+        }
+
+        /* Navigation links */
+        .navbar-nav {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .navbar-nav .nav-link {
+            color: white;
+            font-weight: bold;
+            padding: 8px 16px;
+            border-radius: 20px;
+            transition: background 0.3s;
+        }
+
+
+        .navbar-nav .nav-link:hover {
+            background-color: #174d79;
+            box-shadow: 0px 1px 2px rgba(0, 141, 184, 0.3);
+            color: #49c5eb;
+
+        }
+
+        .navbar .navbar-nav .nav-link:hover,
+        .navbar .navbar-nav .nav-link.active {
+            color: #40c3ff;
+        }
+
+        /* Logo */
+        .logo-container {
+            background-color: #194769;
+            padding: 4px 12px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+
+        }
+
+
+
+        .logo-container img {
+            height: 68px;
+            width: 68px;
+            padding: 8px;
+        }
+
+
+
+        .navbar-toggler {
+            border: none;
+        }
+
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30' fill='white'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+        }
+
+
+        .navbar-toggler-icon {
+            filter: invert(1);
+        }
+
+        .navbar-nav .nav-item {
+            padding: 2px 0;
+            /* Adjust padding to reduce height */
+        }
+
+        .navbar-nav .nav-link {
+            padding: 12px 12px;
+            /* Reduce padding if needed */
+            line-height: 1.2;
+            /* Make sure links aren't too tall */
+        }
+
+        /* Center logo on large screens */
+        @media (min-width: 992px) {
+            .logo-container {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-55%);
+            }
+        }
+
+        /* Move logo to the left on small screens */
+        @media (max-width: 1199px) {
+            .logo-container {
+                position: relative;
+
+                transform: none;
+                margin-left: 2px;
+            }
+
+            .logo-container {
+
+                padding: 2px 12px;
+                gap: 4px;
+
+            }
+
+            .logo-container img {
+                height: 64px;
+                width: 64px;
+            }
+
+
+            .navbar .logo-container {
+                order: -1;
+                /* Move logo to the first position */
+
+            }
+
+            .navbar-toggler {
+                margin-left: auto;
+                /* Move toggler to the right */
+            }
+
+        }
+
+        /* Move logo to the left on small screens */
+        @media (max-width: 1600px) {
+
+
+            .header-carousel .owl-dots {
+                position: absolurete;
+                width: 100%;
+                height: 10%;
+                top: 540px;
+                bottom: 20px;
+                right: 0px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                padding: 10px;
+
+            }
+
+            .header-carousel .owl-carousel-item p {
+                max-width: 576px;
+            }
+        }
+
+        /* Move logo to the left on small screens */
+        @media (max-width: 1420px) {
+
+
+            .header-carousel .owl-dots {
+                position: absolurete;
+                width: 100%;
+                height: 10%;
+                top: 480px;
+                bottom: 20px;
+                right: 0px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                padding: 10px;
+
+            }
+
+            .header-carousel .owl-carousel-item p {
+                max-width: 1000px;
+            }
+        }
+
+
+
+
+        /* Move logo to the left on small screens */
+        @media (max-width: 576px) {
+
+
+            .header-carousel .owl-dots {
+                position: absolurete;
+                width: 100%;
+                height: 10%;
+                top: 480px;
+                bottom: 20px;
+                right: 0px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                padding: 10px;
+
+            }
+
+            .header-carousel .owl-carousel-item p {
+                max-width: 576px;
+            }
+        }
+
+        .navbar-toggler {
+            background-color: rgb(255, 255, 255);
+            /* Light white-transparent background */
+            border: 2px solid white;
+            /* White border */
+            border-radius: 8px;
+            /* Rounded corners */
+            padding: 3px;
+            /* Reduce padding for a smaller button */
+            width: 35px;
+            /* Reduce button width */
+            height: 35px;
+            /* Reduce button height */
+        }
+
+        .navbar-toggler-icon {
+            width: 22px;
+            /* Reduce icon width */
+            height: 22px;
+            /* Reduce icon height */
+
+            border-radius: 0px;
+            /* Slight rounding for the icon */
+        }
+
+
+
+        /* Hero Section */
+        .hero-container {
+            width: 95%;
+
+            margin: 80px auto 0;
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Hero Section */
+        .container-fluid {
+            width: 95%;
+
+            margin: 40px auto 0;
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .carousel-item {
+            position: relative;
+            width: 100%;
+            height: 600px;
+            /* Fixed height */
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* Crop image while maintaining aspect ratio */
+        }
+
+
+        /* Overlay */
+        .carousel-caption {
+            position: absolute;
+            top: 50%;
+            left: 8%;
+            transform: translateY(-50%);
+            text-align: left;
+            max-width: 500px;
+        }
+
+        .carousel-caption h1 {
+            font-size: 38px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .carousel-caption p {
+            font-size: 18px;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .cta-btn {
+            background-color: rgba(255, 255, 255, 0);
+            color: #ffffff;
+            padding: 12px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            border: 2px solid #ffffff;
+            /* Add a border */
+            transition: all 0.3s ease-in-out;
+            /* Smooth transition */
+        }
+
+        /* Hover Effect */
+        .cta-btn:hover {
+            background-color: #49c5eb3a;
+            /* Change background to brown */
+            color: #49c5eb;
+            /* Change text to white */
+            border-color: #49c5eb;
+            /* Keep border same as background */
+            transform: scale(1.05);
+            /* Slightly enlarge button */
+        }
+
+
+
+        .cta-btn2 {
+            background-color: rgb(255, 123, 0);
+            color: #a67c52;
+            padding: 12px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .owl-dots {
+            position: relative;
+            bottom: auto;
+            top: auto;
+            margin-top: 30px;
+            text-align: center;
+            z-index: 1;
+        }
+
+        .owl-dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background: #aaa;
+            margin: 5px;
+            border-radius: 50%;
+        }
+
+        .owl-dot.active {
+            background: #333;
+        }
+
+        .testimonial-carousel .owl-dot {
+            position: relative;
+            display: inline-block;
+            margin: 0 5px;
+            width: 80px;
+            height: 80px;
+            background: var(--primary);
+            border: 5px solid var(--light);
+            border-radius: 50%;
+            transition: .5s;
+        }
+
+        .testimonial-carousel .owl-dot.active {
+            background: var(--light);
+            border-color: var(--primary);
+        }
+
+
+        @media (max-width: 576px) {
+
+            #head-scroll {
+                display: flex;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+                /* allow wrapping on small screens */
+            }
+
+            #head-scroll>.col-10 {
+                width: 100% !important;
+                /* make column full width on small devices */
+            }
+
+        }
+
+
+        .dropdown-menu.rounded-custom {
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+            min-width: 150px;
+            padding: 8px 0;
+        }
+
+        .dropdown-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 16px;
+            transition: background-color 0.2s ease;
+        }
+
+        .dropdown-item:hover {
+            background-color: #f0f0f0;
+            border-radius: 8px;
+        }
+
+        .dropdown-icon {
+            font-size: 1.2rem;
+        }
+
+
+
+        #spinner {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 1.5s ease-out 0.5s, visibility 0s linear 2s;
+            z-index: 99999;
+        }
+
+        #spinner.show {
+            opacity: 1;
+            visibility: visible;
+            transition: opacity 1.5s ease-out 0s, visibility 0s linear 0s;
+        }
+
+        /* iPad Pro / Tablet Landscape */
+        @media (max-width: 1420px) {
+            .carousel-video {
+                width: 450px;
+                height: 340px;
+            }
+        }
+
+        /* Tablet Portrait / Mobile Landscape */
+        @media (max-width: 991.98px) {
+            .carousel-video {
+                width: 350px;
+                height: 260px;
+            }
+        }
+
+        /* Mobile Portrait */
+        @media (max-width: 767.98px) {
+            .carousel-video {
+                width: 100%;
+                height: auto;
+                border-radius: 15px;
+            }
+        }
+    </style>
+
+
+
+
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+
+        <img class="position-absolute top-50 start-50 translate-middle" style="max-width: 300px; width: 100%;"
+            src="img/icons/icon-1.webp" alt="Icon">
+
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-consent-banner" class="cookie-consent-banner">
+        <p>
+            <span data-translate="cookieBanner">
+                This website uses cookies to track user behavior and improve your experience. Please choose whether you
+                consent
+                to the use of cookies for tracking purposes. You can view our
+            </span>
+            <a href="policy.html" target="_blank" style="color: #FF3E41; text-decoration: underline;"
+                data-translate="link-cookie">
+                cookies policy
+            </a>.
+        </p>
+
+        <button id="accept-cookies" data-translate="accept-cookies">Accept</button>
+        <button id="decline-cookies" data-translate="decline-cookies">Decline</button>
+    </div>
+
+
+
+
+
+    <nav class="navbar navbar-expand-xl navbar-custom">
+        <!-- Navbar Toggle Button for Mobile -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+
+
+        </button>
+
+        <!-- Logo (Centered in large screens, left in mobile) -->
+        <a class="navbar-brand logo-container" href="index.html">
+            <img src="img/icons/icon-1.webp" alt="Logo">
+            <span class="fw-bold text-white pe-3">GRAND DRAGON</span>
+        </a>
+
+
+
+        <!-- Collapsible Menu -->
+        <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+            <!-- Left Nav -->
+            <ul class="navbar-nav">
+                <li class="nav-item"><a href="index.html" class="nav-link" data-translate="home">Home</a></li>
+                <li class="nav-item"><a href="article.php" class="nav-link" data-translate="article">Article</a></li>
+                <li class="nav-item"><a href="service.html" class="nav-link" data-translate="services">Services</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link" data-translate="about">About</a></li>
+
+
+            </ul>
+
+            <!-- Right Nav -->
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a href="download.html" class="nav-link" data-translate="download">Download</a>
+                </li>
+                <li class="nav-item"><a href="contact.html" class="nav-link" data-translate="contact">Contact</a></li>
+                <li class="nav-item"><a href="policy.html" class="nav-link" data-translate="policy">Policy</a></li>
+
+                <!-- Language Dropdown -->
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" id="languageDropdown" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        🌐
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end rounded-custom" aria-labelledby="languageDropdown">
+                        <li><a class="dropdown-item" href="#" onclick="changeLanguage('en')">EN</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="changeLanguage('th')">TH</a></li>
+                    </ul>
+                </div>
+            </ul>
+        </div>
+    </nav>
+
+
+
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0 fadeIn">
+        <div class="owl-carousel header-carousel position-relative">
+            <div class="owl-carousel-item position-relative" data-dot="<img src='img/global-2.png'>">
+                <img class="img-fluid" src="img/global-2.webp" alt="">
+
+                <div class="owl-carousel-inner">
+                    <div class="container">
+                        <div class="row justify-content-center align-items-center" id="head-scroll">
+
+                            <!-- Column 1 -->
+                            <div class="col-12 col-lg-6 text-center text-lg-start">
+                                <p class="fs-5 fw-medium mb-1 pb-1 text-center text-lg-start" style="color: #29c2ff;"
+                                    data-translate="cap1">
+                                    INTERNATIONAL CHALLAGE
+                                </p>
+
+                                <h1 class="display-3 fw-bold text-white animated slideInDown pb-2"
+                                    style="line-height: 0.9; border-bottom: 2px solid #29c2ff;" data-translate="title1">
+                                    NAVIGATING GLOBAL TRADE
+
+                                </h1>
+                                <p class="fs-5 fw-medium text-white mb-4 pb-3 text-center text-lg-start"
+                                    data-translate="description1">
+                                    Analyze the complexities of cross-border logistics, focusing on regulatory hurdles,
+                                    customs processes, and strategies for efficient international shipping.
+                                </p>
+                                <a href="service.html" class="cta-btn animated slideInLeft" data-translate="button1">Our
+                                    Service</a>
+                            </div>
+
+                            <!-- Column 2 -->
+                            <div class="col-12 col-lg-6 d-none d-lg-flex justify-content-center align-items-center"
+                                style="height: 100%;">
+                                <!-- <img src="img/c1-2.png" alt="" style="width: 500px; height: 500px; object-fit: cover; border-radius: 15px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); border: 5px solid #ffffff; 
+                                    border-top-width: 80px; 
+                                    "> -->
+
+                                <video class="carousel-video" width="600" height="450" autoplay muted loop
+                                    data-src="img/v5.mp4"
+                                    style="object-fit: cover; border-radius: 10%; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2), 0px 10px 80px #003257; border: 5px solid #003257; border-top-width: 5px;">
+                                </video>
+
+                            </div>
+
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class=" owl-carousel-item position-relative" data-dot="<img src='img/carousel-1.jpg'>">
+                <img class="img-fluid" src="img/carousel-1.webp" alt="">
+                <div class="owl-carousel-inner">
+                    <div class="container">
+                        <div class="row justify-content-center align-items-center" id="head-scroll">
+
+
+                            <!-- Column 2 -->
+                            <div class="col-12 col-lg-6 d-none d-lg-flex justify-content-center align-items-center"
+                                style="height: 100%;">
+                                <!-- <img src="img/c1-2.png" alt="" style="width: 500px; height: 500px; object-fit: cover; border-radius: 15px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); border: 5px solid #ffffff; 
+                                    border-top-width: 80px; 
+                                    "> -->
+
+                                <video class="carousel-video" width="600" height="450" autoplay muted loop
+                                    data-src="img/v2.mp4"
+                                    style="object-fit: cover; border-radius: 10%; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); border: 5px solid #003257; border-top-width: 5px;">
+                                </video>
+
+                            </div>
+
+                            <div class="col-12 col-lg-6 text-center text-lg-start">
+                                <p class="fs-5 fw-medium mb-1 pb-1 text-center text-lg-start" style="color: #ffa929;"
+                                    data-translate="cap2">
+                                    Analyze.
+                                </p>
+                                <h1 class="display-3 text-white animated slideInDown pb-2"
+                                    style="line-height: 0.9; border-bottom: 2px solid #ffa929;" data-translate="title2">
+                                    FUTURE OF SUPPLY CHAINS
+
+
+                                </h1>
+                                <p class="fs-5 fw-medium text-white mb-4 pb-3 text-lg-start"
+                                    data-translate="description2">Explore
+                                    current trends in
+                                    the trucking
+                                    industry, including labor shortages and
+                                    regulatory changes.</p>
+                                <a href="service.html" class="cta-btn slideInLeft" data-translate="button1">Oue
+                                    Service</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="owl-carousel-item position-relative" data-dot="<img src='img/carousel-3.jpg'>">
+                <img class="img-fluid" src="img/carousel-3.webp" alt="">
+                <div class="owl-carousel-inner">
+                    <div class="container">
+                        <div class="row justify-content-center align-items-center" id="head-scroll">
+                            <div class="col-12 col-lg-6 text-center text-lg-start">
+                                <p class="fs-5 fw-medium mb-1 pb-1 text-center text-lg-start" style="color: #29c2ff;"
+                                    data-translate="cap3">
+                                    Analyze.
+                                </p>
+                                <h1 class="display-3 text-white animated slideInDown pb-2"
+                                    style="line-height: 0.9; border-bottom: 2px solid #29c2ff;" data-translate="title3">
+                                    TRUCKING
+                                    INDUSTRY TRENDS</h1>
+                                <p class="fs-5 fw-medium text-white mb-4 pb-3 text-lg-start"
+                                    data-translate="description3">
+                                    Collaborates closely with
+                                    clients to
+                                    deliver customized solutions that meet their
+                                    unique needs.</p>
+                                <a href="service.html" class="cta-btn animated slideInLeft" data-translate="button1">Our
+                                    Service</a>
+                            </div>
+
+                            <!-- Column 2 -->
+                            <div class="col-12 col-lg-6 d-none d-lg-flex justify-content-center align-items-center"
+                                style="height: 100%;">
+                                <!-- <img src="img/c1-2.png" alt="" style="width: 500px; height: 500px; object-fit: cover; border-radius: 15px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); border: 5px solid #ffffff; 
+                                    border-top-width: 80px; 
+                                    "> -->
+
+                                <video class="carousel-video" width="600" height="450" autoplay muted loop
+                                    data-src="img/v3.mp4"
+                                    style="object-fit: cover; border-radius: 10%; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); border: 5px solid #003257; border-top-width: 5px;">
+                                </video>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+    <!-- Feature Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 col-md-7 wow fadeInUp" data-wow-delay="0.1s">
+                    <h4 class="section-title" data-translate="our-history">Our History</h4>
+                    <h2 class="display-6 mb-4" data-translate="trusted-logistics-company">We Are Trusted Logistics
+                        Company Since 2010</h2>
+                    <p class="mb-4" data-translate="company-setup">We were set up by a group of highly experienced
+                        people who have been in the freight forwarding business for more than 10 years.</p>
+                    <div class="row g-4">
+                        <div class="col-12">
+                            <div class="d-flex align-items-start">
+                                <img class="icon-colored" src="img/icons/icon-b4.png" alt="Icon">
+                                <div class="ms-4">
+                                    <h3 data-translate="cross-border-logistics">Cross-Border Logistics</h3>
+                                    <p class="mb-0" data-translate="cross-border-description">Our group works
+                                        exclusively with freight forwarding and customs brokerage companies, offering
+                                        competitive air and sea freight rates and transportation services worldwide.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="d-flex align-items-start">
+                                <img class="icon-colored" src="img/icons/icon-b5.png" alt="Icon">
+                                <div class="ms-4">
+                                    <h3 data-translate="navigating-new-normal">Navigating the New Normal</h3>
+                                    <p class="mb-0" data-translate="navigating-description">We have grown to become one
+                                        of the leading logistics solution providers in Thailand, focusing on customer
+                                        satisfaction and becoming a top freight forwarding company.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="d-flex align-items-start">
+                                <img class="icon-colored" src="img/icons/icon-b6.png" alt="Icon">
+                                <div class="ms-4">
+                                    <h3 data-translate="partners-leading-companies">Partners with leading companies
+                                        worldwide</h3>
+                                    <p class="mb-0" data-translate="partners-description">Empire Global Logistics Co.,
+                                        Ltd. is part of a group with Grand Dragon Logistics Co., Ltd., offering
+                                        import/export services to and from Thailand.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-5 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="feature-img">
+                        <img class="img-fluid" src="img/about2.webp"
+                            style="max-height: 600px; object-fit: cover; border-radius: 15px;" alt=""
+                            data-translate="about-image">
+                        <img class="img-fluid" src="img/cargo4.webp"
+                            style="max-height: 600px; object-fit: cover; border-radius: 15px;" alt=""
+                            data-translate="cargo-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Feature End -->
+
+
+    <!-- Facts Start -->
+    <div class="container-xxl">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="fact-item text-center bg-light h-100 p-4 pt-0">
+                        <div class="fact-icon">
+
+                            <img src="img/icons/icon-b1.png" alt="Icon">
+                        </div>
+                        <h3 class="mb-3" style="color: rgb(143, 197, 223);" data-translate="globalCoverage">Global
+                            Coverage</h3>
+                        <p class="mb-0" data-translate="globalCoverageDesc">With over 10 years of experience,
+                            collaborates closely with
+                            clients to deliver
+                            customized solutions that meet their unique needs.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="fact-item text-center bg-light h-100 p-4 pt-0">
+                        <div class="fact-icon">
+                            <img src="img/icons/icon-b2.png" alt="Icon">
+                        </div>
+                        <h3 class="mb-3" style="color: rgb(143, 197, 223);" data-translate="onTimeDelivery">On Time
+                            Delivery</h3>
+                        <p class="mb-0" data-translate="onTimeDeliveryDesc">We ensure your products reach their
+                            destination on time and
+                            within budget.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="fact-item text-center bg-light h-100 p-4 pt-0">
+                        <div class="fact-icon">
+                            <img src="img/icons/icon-b3.png" alt="Icon">
+                        </div>
+                        <h3 class="mb-3" style="color: rgb(143, 197, 223);" data-translate="excellentMananger">Excellent
+                            Management</h3>
+                        <p class="mb-0" data-translate="excellentManangerDesc">Analyze the complexities of cross-border
+                            logistics and focusing on regulatory
+                            hurdles for efficient international shipping.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Facts End -->
+
+    <!-- About Start -->
+    <div class="container-xxl pt-5 pb-1 pb-sm-3 mb-1 mb-sm-5">
+
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 col-md-6 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="about-img">
+                        <img class="img-fluid" src="img/service4.webp"
+                            style="max-height: 400px; object-fit: cover; border-radius: 15px;" alt="">
+
+                        <img class="img-fluid" src="img/service9.webp"
+                            style="max-height: 400px; object-fit: cover; border-radius: 15px;" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 wow fadeIn" data-wow-delay="0.5s">
+                    <h2 class="display-6 mb-4" data-translate="innovative-transportation-services">Innovative
+                        Transportation Services for a Global Marketplace</h2>
+                    <!-- Added margin below -->
+
+                    <p class="mb-4" data-translate="empire-global-logistics-description">At Empire Global Logistics, we
+                        understand the demands of today’s global marketplace.
+                        Our experienced team offers innovative transportation services that include air and sea freight,
+                        customs brokerage, and last-mile delivery solutions. Empire Global Logistics Co., Ltd. is part
+                        of a group with Grand Dragon Logistics Co., Ltd., offering import/export services to and from
+                        Thailand.
+                    </p>
+
+                    <div class="d-flex align-items-center mb-4">
+                        <!-- Reduced margin-bottom -->
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center border border-5 border-primary"
+                            style="width: 120px; height: 120px; margin-right: 15px;">
+
+                            <!-- Added right margin -->
+                            <h1 class="display-1 mb-0" data-toggle="counter-up">10</h1>
+                        </div>
+
+                        <div>
+                            <!-- Wrapped text elements in a div for proper spacing -->
+                            <h3 class="mb-2" data-translate="years-working-experience">Years Working Experience</h3>
+                            <!-- Reduced margin-bottom -->
+                            <p class="mb-0" data-translate="leading-logistics-solution-providers">We have grown to
+                                become one of the leading logistics solution providers in Thailand, focusing on customer
+                                satisfaction and becoming a top freight forwarding company.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+
+    <!-- Facts Start -->
+    <div class="container-xxl mb-1 mb-sm-5">
+        <div class="text-center mx-auto wow fadeInUp pt-5 pb-5 pb-sm-3" data-wow-delay="0.1s" style="max-width: 600px;">
+            <h4 class="section-title" data-translate="our-partner">Our Partner</h4>
+            <h1 class="display-5" data-translate="global-network">Global network</h1>
+        </div>
+        <div class="container pt-1">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="fact-item2 d-flex justify-content-center align-items-center text-center  h-50 p-0 pt-0">
+                        <img src="img/icons/icon-b4.jpg" alt="Icon" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="fact-item2 d-flex justify-content-center align-items-center text-center  h-50 p-0 pt-0">
+                        <img src="img/icons/icon-b2.jpg" alt="Icon" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="fact-item2 d-flex justify-content-center align-items-center text-center  h-50 p-0 pt-0">
+                        <img src="img/icons/icon-b3.jpg" alt="Icon" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s"
+            style="max-width: 1400px; margin-top: -20px;">
+            <p data-translate="empire-global-logistics-description2">
+                At Empire Global Logistics, we understand the demands of today’s global marketplace. Our experienced
+                team, with more than a decade in the logistics field, offers innovative transportation services that
+                include air and sea freight, customs brokerage, and last-mile delivery solutions.
+            </p>
+        </div>
+    </div>
+
+
+    <!-- Facts End -->
+
+
+    <!-- Service Start -->
+    <div class="container-xxl">
+        <div class="container ">
+            <div class="text-center mx-auto mb-5 pt-4 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h4 class="section-title" data-translate="our-services">Our Services</h4>
+                <h1 class="display-5 mb-4" data-translate="explore-our-services">Explore Our Services</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item d-flex position-relative text-center h-100">
+                        <img class="bg-img" src="img/service1.webp" alt="">
+                        <div class="service-text p-5">
+                            <i class="mb-4 fa-solid fa-dolly fa-3x blue-icon"></i>
+                            <h3 class="mb-3" data-translate="nvocc-consolidation">NVOCC Consolidation</h3>
+                            <p class="mb-4" data-translate="nvocc-consolidation-description">A service offering
+                                Non-Vessel Operating Common Carrier (NVOCC) consolidation to combine smaller shipments
+                                into one, lowering costs and simplifying international shipments.</p>
+                            <a class="btn" href="staff-a1.php"><i class="fa fa-plus text-primary me-3"></i>Contact</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item d-flex position-relative text-center h-100">
+                        <img class="bg-img" src="img/service2.webp" alt="">
+                        <div class="service-text p-5">
+                            <i class="mb-4 fa-solid fa-clipboard-list fa-3x blue-icon"></i>
+                            <h3 class="mb-3" data-translate="customs-clearance">Customs Clearance</h3>
+                            <p class="mb-4" data-translate="customs-clearance-description">Expert customs handling to
+                                ensure your goods meet all legal requirements, allowing smooth, compliant passage across
+                                borders.</p>
+                            <a class="btn" href="staff-a2.php"><i class="fa fa-plus text-primary me-3"></i>Contact</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item d-flex position-relative text-center h-100">
+                        <img class="bg-img" src="img/service3.webp" alt="">
+                        <div class="service-text p-5">
+                            <i class="mb-4 fa-solid fa-box fa-3x blue-icon"></i>
+                            <h3 class="mb-3" data-translate="lcl-service">LCL (Less than Container Load)</h3>
+                            <p class="mb-4" data-translate="lcl-service-description">Shipping for smaller loads that
+                                don’t require a full container, offering cost-effective space within a shared container.
+                            </p>
+                            <a class="btn" href="staff-a3.php"><i class="fa fa-plus text-primary me-3"></i>Contact</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="service-item d-flex position-relative text-center h-100">
+                        <img class="bg-img" src="img/service4.webp" alt="">
+                        <div class="service-text p-5">
+                            <i class="mb-4 fa-solid fa-boxes-stacked fa-3x blue-icon"></i>
+                            <h3 class="mb-3" data-translate="fcl-service">FCL (Full Container Load)</h3>
+                            <p class="mb-4" data-translate="fcl-service-description">Full container load shipping,
+                                providing dedicated container space for larger shipments to ensure secure and timely
+                                delivery.</p>
+                            <a class="btn" href="staff-a4.php"><i class="fa fa-plus text-primary me-3"></i>Contact</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.9s">
+                    <div class="service-item d-flex position-relative text-center h-100">
+                        <img class="bg-img" src="img/service5.webp" alt="">
+                        <div class="service-text p-5">
+                            <i class="mb-4 fa-solid fa-truck fa-3x blue-icon"></i>
+                            <h3 class="mb-3" data-translate="inland-transportation">Inland Transportation</h3>
+                            <p class="mb-4" data-translate="inland-transportation-description">Reliable transport
+                                solutions to move goods within the country by road or rail from ports to final
+                                destinations.</p>
+                            <a class="btn" href="staff-a5.php"><i class="fa fa-plus text-primary me-3"></i>Contact</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="1.1s">
+                    <div class="service-item d-flex position-relative text-center h-100">
+                        <img class="bg-img" src="img/service6.webp" alt="">
+                        <div class="service-text p-5">
+                            <i class="mb-4 fa-solid fa-ship fa-3x blue-icon"></i>
+                            <h3 class="mb-3" data-translate="international-freight-forwarding">International Freight
+                                Forwarding</h3>
+                            <p class="mb-4" data-translate="international-freight-forwarding-description">Comprehensive
+                                freight forwarding services that manage and coordinate the global transport of your
+                                goods.</p>
+                            <a class="btn" href="staff-a6.php"><i class="fa fa-plus text-primary me-3"></i>Contact</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    <!-- Service End -->
+
+
+
+
+
+    <!-- Project Start -->
+    <div class="container-xxl project py-5">
+        <div class="container">
+            <div class="text-center mx-auto wow fadeInUp pt-4" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h4 class="section-title" data-translate="our_article">Our Article</h4>
+                <h1 class="display-5 mb-4" data-translate="read_article_info">Read our article for more information.
+                </h1>
+            </div>
+            <div class="row g-4 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="col-lg-4">
+                    <div class="nav nav-pills d-flex justify-content-between w-100 h-100 me-4">
+                        <button class="nav-link w-100 d-flex align-items-center text-start  mb-4 active"
+                            data-bs-toggle="pill" data-bs-target="#tab-pane-1" type="button">
+                            <h4 class="m-0" data-translate="article_01">01. Green Logistics
+                            </h4>
+                        </button>
+                        <button class="nav-link w-100 d-flex align-items-center text-start  mb-4" data-bs-toggle="pill"
+                            data-bs-target="#tab-pane-2" type="button">
+                            <h4 class="m-0" data-translate="article_02">02. Digital Logistics Management in the Digital
+                                Age</h4>
+                        </button>
+                        <button class="nav-link w-100 d-flex align-items-center text-start  mb-4" data-bs-toggle="pill"
+                            data-bs-target="#tab-pane-3" type="button">
+                            <h4 class="m-0" data-translate="article_03">03. The Importance of Logistics in E-Commerce
+                            </h4>
+                        </button>
+                        <button class="nav-link w-100 d-flex align-items-center text-start  mb-0" data-bs-toggle="pill"
+                            data-bs-target="#tab-pane-4" type="button">
+                            <h4 class="m-0" data-translate="article_04">04. Inventory Management in Logistics</h4>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="tab-content w-100">
+                        <div class="tab-pane fade show active" id="tab-pane-1">
+                            <div class="row g-4">
+                                <div class="col-md-6" style="min-height: 350px;">
+                                    <div class="position-relative h-100">
+                                        <img class="position-absolute img-fluid w-100 h-100" src="img/article4-1.webp"
+                                            style="object-fit: cover;" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <h2 class="mb-3" data-translate="sustainable_transport_title">Developing Sustainable
+                                        and Environmentally Friendly Transportation Methods</h2>
+                                    <p class="mb-4" data-translate="sustainable_transport_desc">
+                                        Today, green logistics has garnered significant attention from both consumers
+                                        and businesses due to the substantial environmental impact caused by the growth
+                                        of trade and transportation.
+                                    </p>
+                                    <p><i class="fa fa-check text-primary me-3"></i><span
+                                            data-translate="design_approach">Design Approach</span></p>
+                                    <p><i class="fa fa-check text-primary me-3"></i><span
+                                            data-translate="green_logistics">Green Logistics</span></p>
+                                    <p><i class="fa fa-check text-primary me-3"></i><span
+                                            data-translate="project_management">Project Management</span></p>
+                                    <div style="display: flex; justify-content: center; width: 100%;">
+                                        <a href="#" class="btn btn-primary mt-3"
+                                            style="border-radius: 30px; padding: 12px 30px; font-size: 18px;"
+                                            data-translate="read_more">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="tab-pane-2">
+                            <div class="row g-4">
+                                <div class="col-md-6" style="min-height: 350px;">
+                                    <div class="position-relative h-100">
+                                        <img class="position-absolute img-fluid w-100 h-100" src="img/article4-2.webp"
+                                            style="object-fit: cover;" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <h2 class="mb-3" data-translate="tech_logistics_title">Analyzing the Role of
+                                        Technology in Logistics</h2>
+                                    <p class="mb-4" data-translate="tech_logistics_desc">
+                                        In an era where digital technology plays a crucial role in every aspect of
+                                        business, logistics is no exception. Modern logistics management relies on
+                                        technology to enhance operational efficiency and respond swiftly to customer
+                                        demands.
+                                    </p>
+                                    <p><i class="fa fa-check text-primary me-3"></i><span
+                                            data-translate="design_approach">Design Approach</span></p>
+                                    <p><i class="fa fa-check text-primary me-3"></i><span
+                                            data-translate="innovative_solutions">Innovative Solutions</span></p>
+                                    <p><i class="fa fa-check text-primary me-3"></i><span
+                                            data-translate="project_management">Project Management</span></p>
+                                    <div style="display: flex; justify-content: center; width: 100%;">
+                                        <a href="#" class="btn btn-primary mt-3"
+                                            style="border-radius: 30px; padding: 12px 30px; font-size: 18px;"
+                                            data-translate="read_more">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="tab-pane-3">
+                            <div class="row g-4">
+                                <div class="col-md-6" style="min-height: 350px;">
+                                    <div class="position-relative h-100">
+                                        <img class="position-absolute img-fluid w-100 h-100" src="img/article4-3.webp"
+                                            style="object-fit: cover;" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <h2 class="mb-3" data-translate="ecommerce_logistics_title">
+                                        Exploring How the Growth of E-Commerce Affects the Demand for Logistics Services
+                                    </h2>
+                                    <p class="mb-4" data-translate="ecommerce_logistics_desc">
+                                        In an era where E-commerce is rapidly growing, this transformation not only
+                                        impacts consumer purchasing behavior but also profoundly affects the logistics
+                                        industry. Logistics has become a critical factor that enables E-commerce
+                                        businesses to meet customer demands efficiently.
+                                    </p>
+                                    <p><i class="fa fa-check text-primary me-3"></i><span
+                                            data-translate="consumer_behavior">Consumer Behavior</span></p>
+                                    <p><i class="fa fa-check text-primary me-3"></i><span
+                                            data-translate="innovative_solutions">Innovative Solutions</span></p>
+                                    <p><i class="fa fa-check text-primary me-3"></i><span
+                                            data-translate="logistics_ecommerce">Logistics in E-Commerce</span></p>
+                                    <div style="display: flex; justify-content: center; width: 100%;">
+                                        <a href="#" class="btn btn-primary mt-3"
+                                            style="border-radius: 30px; padding: 12px 30px; font-size: 18px;"
+                                            data-translate="read_more">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="tab-pane-4">
+                            <div class="row g-4">
+                                <div class="col-md-6" style="min-height: 350px;">
+                                    <div class="position-relative h-100">
+                                        <img class="position-absolute img-fluid w-100 h-100" src="img/article4-4.webp"
+                                            style="object-fit: cover;" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <h2 class="mb-3" data-translate="inventory_management_title">Strategies for
+                                        Inventory Control</h2>
+                                    <p class="mb-4" data-translate="inventory_management_desc">
+                                        Inventory management is one of the most critical activities in logistics, as it
+                                        directly impacts operational efficiency and customer satisfaction. Effective
+                                        inventory management can help reduce costs, increase responsiveness to orders,
+                                        and minimize issues related to stockouts or excess inventory.
+                                    </p>
+                                    <p><i class="fa fa-check text-primary me-3"></i><span
+                                            data-translate="effective_inventory">Effective Inventory Control</span></p>
+                                    <p><i class="fa fa-check text-primary me-3"></i><span
+                                            data-translate="innovative_solutions">Innovative Solutions</span></p>
+                                    <p><i class="fa fa-check text-primary me-3"></i><span
+                                            data-translate="enhance_efficiency">Enhance Efficiency</span></p>
+                                    <div style="display: flex; justify-content: center; width: 100%;">
+                                        <a href="#" class="btn btn-primary mt-3"
+                                            style="border-radius: 30px; padding: 12px 30px; font-size: 18px;"
+                                            data-translate="read_more">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Project End -->
+
+
+    <!-- Team Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-1 wow fadeInUp" data-wow-delay="0.1s"
+                style="max-width: 1000px; max-height: 300px;">
+                <h4 class="section-title" data-translate="staff_title">Staff Members</h4>
+                <h1 class="display-5 mb-4" data-translate="staff_subtitle">We Are Experience Staff Team For Your
+                    Transport</h1>
+            </div>
+            <div class="row g-0 team-items justify-content-center">
+                <!-- Member 1 -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item position-relative shadow-team m-2">
+                        <div class="position-relative" style="display: flex; justify-content: center;">
+                            <img class="img-fluid" src="img/avartar/avatar5.png" alt="">
+                            <div class="team-social text-center">
+                                <a class="btn btn-square shadow-btn" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square shadow-btn lineIcon" href="#" data-img="img/line_empire.png"><i
+                                        class="fab fa-line fa-2x"></i></a>
+                                <a class="btn btn-square shadow-btn" href=""><i class="fas fa-at"></i></a>
+                            </div>
+                        </div>
+                        <div class="bg-light text-center py-4">
+                            <h5 class="mt-2 fw-bold" data-translate="name_yot">Yot Jirapachotehirun</h5>
+
+                            <span class="section-title" data-translate="role_md">Managing
+                                Director</span>
+                            <div class="text-muted mt-3" style="margin-top: 20px;">081-8199388</div>
+                            <div class=" text-muted" style="word-break: break-word;">yot@empireglobal.co.th
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- Member 2 -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item position-relative shadow-team m-2">
+                        <div class="position-relative" style="display: flex; justify-content: center;">
+                            <img class="img-fluid" src="img/avartar/avatar3.png" alt="">
+                            <div class="team-social text-center">
+                                <a class="btn btn-square shadow-btn" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square shadow-btn lineIcon" href="#" data-img="img/line_empire.png"><i
+                                        class="fab fa-line fa-2x"></i></a>
+                                <a class="btn btn-square shadow-btn" href=""><i class="fas fa-at"></i></a>
+                            </div>
+                        </div>
+                        <div class="bg-light text-center py-4">
+                            <h5 class="mt-2 fw-bold" data-translate="name_suwanna">Suwanna Jirapachotehirun</h5>
+                            <span class="section-title" data-translate="role_gm">General Manager</span>
+                            <div class="text-muted mt-3">081-9346658</div>
+                            <div class="text-muted" style="word-break: break-word;">suwanna@empireglobal.co.th</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Member 3 -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="team-item position-relative shadow-team m-2">
+                        <div class="position-relative" style="display: flex; justify-content: center;">
+                            <img class="img-fluid" src="img/avartar/avatar4.png" alt="">
+                            <div class="team-social text-center">
+                                <a class="btn btn-square shadow-btn" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square shadow-btn lineIcon" href="#" data-img="img/line_empire.png"><i
+                                        class="fab fa-line fa-2x"></i></a>
+                                <a class="btn btn-square shadow-btn" href=""><i class="fas fa-at"></i></a>
+                            </div>
+                        </div>
+                        <div class="bg-light text-center py-4">
+                            <h5 class="mt-2 fw-bold" data-translate="name_passavee">Passavee Tipmontree</h5>
+                            <span class="section-title" data-translate="role_branch_mgr">Branch Office Manager</span>
+                            <div class="text-muted mt-3">093-2989022</div>
+                            <div class="text-muted" style="word-break: break-word;">jeremy99@empireglobal.co.th</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Member 4 -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="team-item position-relative shadow-team m-2">
+                        <div class="position-relative" style="display: flex; justify-content: center;">
+                            <img class="img-fluid" src="img/avartar/avatar1.png" alt="">
+                            <div class="team-social text-center">
+                                <a class="btn btn-square shadow-btn" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square shadow-btn lineIcon" href="#" data-img="img/line_empire.png"><i
+                                        class="fab fa-line fa-2x"></i></a>
+                                <a class="btn btn-square shadow-btn" href=""><i class="fas fa-at"></i></a>
+                            </div>
+                        </div>
+                        <div class="bg-light text-center py-4">
+                            <h5 class="mt-2 fw-bold" data-translate="name_jinjade">Jinjade Jirapachotehirun</h5>
+                            <span class="section-title" data-translate="role_sale_rep">Sale Representative</span>
+                            <div class="text-muted mt-3">098-2580918</div>
+                            <div class="text-muted" style="word-break: break-word;">genejinjade@empireglobal.co.th</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Member 5 -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp mx-1" data-wow-delay="0.7s">
+                    <div class="team-item position-relative shadow-team m-2">
+                        <div class="position-relative" style="display: flex; justify-content: center;">
+                            <img class="img-fluid" src="img/avartar/avatar2.png" alt="">
+                            <div class="team-social text-center">
+                                <a class="btn btn-square shadow-btn" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square shadow-btn lineIcon" href="#" data-img="img/line_empire.png"><i
+                                        class="fab fa-line fa-2x"></i></a>
+
+                                <a class="btn btn-square shadow-btn" href=""><i class="fas fa-at"></i></a>
+                            </div>
+                        </div>
+                        <div class="bg-light text-center py-4">
+                            <h5 class="mt-2 fw-bold" data-translate="name_danuda">Danuda Nakprasert</h5>
+                            <span class="section-title" data-translate="role_sales_mgr">Sales Manager</span>
+                            <div class="text-muted mt-3">061-995-3942</div>
+                            <div class="text-muted" style="word-break: break-word;">danuda@empireglobal.co.th</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- Team End -->
+
+    <!-- The Modal -->
+    <div id="qrModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="qrImage" src="" alt="Line QR Code" class="qr-code">
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var modal = document.getElementById("qrModal");
+            var modalImg = document.getElementById("qrImage");
+            var closeBtn = document.querySelector(".close");
+
+            // Function to open modal with dynamic image
+            function openModal(imageSrc) {
+                console.log("Opening modal with image:", imageSrc);
+                modalImg.src = imageSrc; // Set image source dynamically
+                modal.style.display = "flex";
+            }
+
+            // Attach event listeners to all Line icons
+            document.querySelectorAll(".lineIcon").forEach(function (icon) {
+                icon.addEventListener("click", function (event) {
+                    event.preventDefault(); // Prevent default behavior
+                    var imageSrc = this.getAttribute("data-img"); // Get the specific QR image
+                    openModal(imageSrc);
+                });
+            });
+
+            // Close modal when clicking the close button
+            closeBtn.addEventListener("click", function () {
+                modal.style.display = "none";
+            });
+
+            // Close modal when clicking outside the content
+            window.addEventListener("click", function (event) {
+                if (event.target === modal) {
+                    modal.style.display = "none";
+                }
+            });
+        });
+    </script>
+
+
+
+
+
+    <!-- Testimonial Start -->
+    <div class="container-xxl">
+        <div class="container">
+            <div class="text-center mx-auto mb-1 wow fadeInUp pt-4" data-wow-delay="0.1s" style="max-width: 1200px;">
+                <h4 class="section-title" data-translate="customer_title">Our Customer</h4>
+                <h1 class="display-5 mb-4" data-translate="customer_subtitle">Thousands Of Customers Who Trust Us And
+                    Our Services</h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+                <div class="testimonial-item text-center"
+                    data-dot="<img class='img-fluid' src='img/avatar1.png' alt=''>">
+                    <p class="fs-5" data-translate="testimonial_1">Whether it's large shipments or small parcels, they
+                        handle everything with great care and organization. The seamless process and excellent customer
+                        service make them my go-to choice for logistics.</p>
+                    <h3 data-translate="customer_1">Customer A</h3>
+                    <span class="text-primary" data-translate="testimonial_1_role">Good Service.</span>
+                </div>
+                <div class="testimonial-item text-center"
+                    data-dot="<img class='img-fluid' src='img/avatar2.png' alt=''>">
+                    <p class="fs-5" data-translate="testimonial_2">The tracking system is precise, and the staff ensures
+                        everything arrives on time and in perfect condition. Their consistent reliability makes them a
+                        preferred choice for my shipping needs.</p>
+                    <h3 data-translate="customer_2">Customer C</h3>
+                    <span class="text-primary" data-translate="testimonial_2_role">Excellent Experience.</span>
+                </div>
+                <div class="testimonial-item text-center"
+                    data-dot="<img class='img-fluid' src='img/avatar3.png' alt=''>">
+                    <p class="fs-5" data-translate="testimonial_3">Providing clear and prompt responses to all my
+                        queries. Their dedication to ensuring a smooth experience is truly commendable. I’ll definitely
+                        use their services again in the future.</p>
+                    <h3 data-translate="customer_3">Customer B</h3>
+                    <span class="text-primary" data-translate="testimonial_3_role">Great Choice</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-body footer mt-5 pt-3 px-2 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container-fluid">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="text-light mb-4" data-translate="footer-address">Address</h3>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i><span
+                            data-translate="footer-address-text">445/3 Phetchaburi Road, Phayathai, Rajtavee, Bangkok
+                            10400</span></p>
+                    <p class="mb-2"><i class="fa fa-phone text-light  me-3"></i><span data-translate="footer-phone">+662
+                            215
+                            1769</span></p>
+                    <p class="mb-2"><i class="fa fa-envelope text-light  me-3"></i><span
+                            data-translate="footer-email">admin@empireglobal.co.th</span></p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-square btn-outline-body me-1"
+                            href="https://www.facebook.com/people/EmpireLogistics/61570489110357/?mibextid=wwXIfr&rdid=4YOr5EZxljDqV8vi&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F19qSFV8GD1%2F%3Fmibextid%3DwwXIfr"
+                            target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square btn-outline-body me-1" href="https://www.instagram.com"
+                            target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-square btn-outline-body me-0" href="https://lin.ee/MYiN3II" target="_blank"><i
+                                class="fab fa-line"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="text-light mb-4" data-translate="footer-services">Services</h3>
+                    <a class="btn btn-link" href="staff-a1.php" data-translate="footer-service-1">NVOCC
+                        Consolidation</a>
+                    <a class="btn btn-link" href="staff-a2.php" data-translate="footer-service-2">Customs Clearance</a>
+                    <a class="btn btn-link" href="staff-a3.php" data-translate="footer-service-3">LCL (Less than
+                        Container load)</a>
+                    <a class="btn btn-link" href="staff-a4.php" data-translate="footer-service-4">FCL (Full Container
+                        load)</a>
+                    <a class="btn btn-link" href="staff-a5.php" data-translate="footer-service-5">Inland
+                        Transportation</a>
+                    <a class="btn btn-link" href="staff-a6.php" data-translate="footer-service-6">International Freight
+                        Forwarding</a>
+
+                    <!-- Hidden additional services initially -->
+                    <div id="extra-services" style="display: none;">
+                        <a class="btn btn-link" href="staff-a7.php" data-translate="footer-service-7">Door to door
+                            Service</a>
+                        <a class="btn btn-link" href="staff-a8.php" data-translate="footer-service-8">Industrial
+                            Packaging and Removal</a>
+                        <a class="btn btn-link" href="staff-a9.php" data-translate="footer-service-9">Project Handling
+                            and Marine Insurance</a>
+                        <a class="btn btn-link" href="staff-a10.php" data-translate="footer-service-10">Cross
+                            Border</a>
+                        <a class="btn btn-link" href="staff-a11.php" data-translate="footer-service-11">Air Freight</a>
+                    </div>
+
+                    <!-- Button to toggle the extra services -->
+                    <button id="show-more" onclick="toggleServices()"
+                        style="background: none; border: none; padding: 0; font-size: inherit; color: inherit; cursor: pointer;"
+                        data-translate="footer-show-more">Show More</button>
+
+
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="text-light mb-4" data-translate="footer-quick-links">Quick Links</h3>
+                    <a class="btn btn-link" href="download.html" data-translate="footer-download">Download</a>
+                    <a class="btn btn-link" href="term.html" data-translate="footer-terms">Terms & Condition</a>
+                    <a class="btn btn-link" href="policy.html" data-translate="footer-policy">Privacy Policy</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="text-light mb-4" data-translate="footer-newsletter">Newsletter</h3>
+                    <p data-translate="footer-newsletter-text">Receive news from us.
+
+                    </p>
+                    <div class="position-relative mx-auto" style="max-width: 400px;">
+                        <form id="emailForm">
+                            <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="email" name="email"
+                                id="emailInput" placeholder="Your email" required>
+                            <button type="submit" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2"
+                                data-translate="footer-signup">SignUp</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid copyright">
+            <div class="container">
+                <div class="row d-flex justify-content-center align-items-center">
+                    <div class="col-md-6 text-center">
+                        &copy; <a href="#">Grand Dragon Logistic</a>, All Right Reserved.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top" style="border-radius: 20%;"><i
+            class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <script>
+        document.getElementById('emailForm').addEventListener('submit', async (e) => {
+            e.preventDefault(); // Prevent the form from refreshing the page
+
+            const emailInput = document.getElementById('emailInput');
+            const email = emailInput.value;
+
+            if (email) {
+                try {
+                    const response = await fetch('add_email.php', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/x-www-form-urlencoded',
+                        },
+                        body: new URLSearchParams({
+                            email
+                        }),
+                    });
+
+                    const result = await response.json();
+
+                    if (result.success) {
+                        alert(result.message);
+                        emailInput.value = ''; // Clear the input field
+                    } else {
+                        alert(`Error: ${result.error}`);
+                    }
+                } catch (error) {
+                    console.error('Error adding email:', error);
+                }
+            } else {
+                alert('Please enter a valid email.');
+            }
+        });
+    </script>
+
+    <script>
+        const translations = {
+            en: {
+                home: "Home",
+                article: "Article",
+                about: "About",
+                services: "Services",
+                download: "Download",
+                contact: "Contact",
+                policy: "Policy",
+
+
+                cookieBanner: "This website uses cookies to track user behavior and improve your experience. Please indicate whether you consent to the use of cookies for tracking and improvement purposes. You can view our ",
+                "accept-cookies": "Accept",
+                "decline-cookies": "Decline",
+                "link-cookie": "cookies policy",
+
+                subtitle1: "Cargo & Logistics Solution",
+                title1: "NAVIGATING GLOBAL TRADE",
+                description1: "Analyze the complexities of cross-border logistics and focus strategies for efficient international shipping.",
+                button1: "Our Service",
+
+                subtitle2: "Empowering Your Business with Precision Logistics",
+                title2: "FUTURE OF SUPPLY CHAINS",
+                description2: "Explore key trends in the transportation industry, from cost volatility to the growing role of sustainable practices in the supply chain.",
+                button2: "Our Service",
+
+                title3: "TRUCKING INDUSTRY TRENDS",
+                description3: "Collaborates closely with clients to deliver customized solutions that meet their unique needs.",
+
+                cap1: "     INTERNATIONAL CHALLAGE",
+                cap2: "     SMART LOGISTIC",
+                cap3: "     CROSS-BORDER MISSION",
+
+
+
+
+                "our-history": "Our History",
+                "trusted-logistics-company": "We are trusted logistics company since 2010",
+                "company-setup": "We were set up by a group of highly experienced people who have been in the freight forwarding business for more than 10 years.",
+                "cross-border-logistics": "Cross-Border Logistics",
+                "cross-border-description": "Our group works exclusively with freight forwarding and customs brokerage companies, offering competitive air and sea freight rates and transportation services worldwide.",
+                "navigating-new-normal": "Navigating the New Normal",
+                "navigating-description": "We have grown to become one of the leading logistics solution providers in Thailand, focusing on customer satisfaction and becoming a top freight forwarding company.",
+                "partners-leading-companies": "Partners with leading companies worldwide",
+                "partners-description": "Grand Dragon Logistics Co., Ltd. offering import/export services to and from Thailand.",
+                "about-image": "About Image",
+                "cargo-image": "Cargo Image",
+
+                "innovative-transportation-services": "Innovative Transportation Services for a Global Marketplace",
+                "empire-global-logistics-description": "At Grand Dragon Logistics, we understand the demands of today’s global marketplace. Our experienced team offers innovative transportation services that include air and sea freight, customs brokerage, and last-mile delivery solutions. Empire Global Logistics Co., Ltd. is part of a group with Grand Dragon Logistics Co., Ltd., offering import/export services to and from Thailand.",
+                "years-working-experience": "Years Working Experience",
+                "leading-logistics-solution-providers": "We have grown to become one of the leading logistics solution providers in Thailand, focusing on customer satisfaction and becoming a top freight forwarding company.",
+
+
+                "our-partner": "Our Partner",
+                "global-network": "Global network",
+                "empire-global-logistics-description2": "At Grand Dragon Logistics, we recognize the complexity of today’s global supply chains. With more than a decade of experience and strong alliances with trusted partners, we provide comprehensive logistics services — from customs brokerage to last-mile delivery — tailored to meet each client’s specific needs.",
+
+                header: "Innovative Transportation Services for a Global Marketplace",
+                globalCoverage: "Global Coverage",
+                globalCoverageDesc: "With over 10 years of experience, collaborates closely with clients to deliver customized solutions that meet their unique needs.",
+                onTimeDelivery: "On Time Delivery",
+                onTimeDeliveryDesc: "We ensure your products reach their destination on time and within budget.",
+                aboutDesc: "At Grand Dragon Logistics, we understand the demands of today’s global marketplace. Our experienced team, with more than a decade in the logistics field, offers innovative transportation services that include air and sea freight, customs brokerage, and last-mile delivery solutions.",
+                globalNetwork: "Global network",
+                networkDesc: "Grand Dragon Logistics Co.,Ltd. is one of the members of the WLA network, WPA network and JCtrans Premium with agents worldwide. WLA Global network, WPA network and JCtrans Premium are among the largest independent air, ocean, and logistics businesses in the world.",
+                excellentMananger: "Excellent Management",
+                excellentManangerDesc: "Analyze the complexities of cross-border logistics and focusing on regulator hurdles for efficient international shipping.",
+
+                ourObjective: "Our Objective",
+                empoweringBusinesses: "Empowering Businesses with Comprehensive Freight Solutions",
+                objectiveDescription: "Our team of logistics professionals, each with over 10 years of experience in the industry, specializes in freight forwarding and customs brokerage. We provide competitive air and sea freight rates while ensuring compliance with international regulations, making your logistics experience seamless and stress-free.",
+
+                ourHistory: "Our History",
+                trustedLogistics: "We Are Trusted Logistics Company Since 2010",
+                crossBorderLogistics: "Cross-Border Logistics",
+                crossBorderDesc: "We were set up by a group of highly experienced people who have been in the freight forwarding business for more than 10 years. Our group works exclusively with freight forwarding and customs brokerage companies, offering competitive air and sea freight rates and transportation services worldwide.",
+                navigatingNewNormal: "Navigating the New Normal",
+                newNormalDesc: "We have grown to become one of the leading logistics solution providers in Thailand, focusing on customer satisfaction and becoming a top freight forwarding company.",
+                supplyChainTransparency: "Partners with leading companies worldwide",
+                transparencyDesc: "Grand Dragon Logistics Co., Ltd. is part of a group with Grand Dragon Logistics Co., Ltd., offering import/export services to and from Thailand.",
+
+
+                "our-services": "Our Services",
+                "explore-our-services": "Explore Our Services",
+                "nvocc-consolidation": "NVOCC Consolidation",
+                "nvocc-consolidation-description": "A service offering Non-Vessel Operating Common Carrier (NVOCC) consolidation to combine smaller shipments into one, lowering costs and simplifying international shipments.",
+                "customs-clearance": "Customs Clearance",
+                "customs-clearance-description": "Expert customs handling to ensure your goods meet all legal requirements, allowing smooth, compliant passage across borders.",
+                "lcl-service": "LCL (Less than Container Load)",
+                "lcl-service-description": "Shipping for smaller loads that don’t require a full container, offering cost-effective space within a shared container.",
+                "fcl-service": "FCL (Full Container Load)",
+                "fcl-service-description": "Full container load shipping, providing dedicated container space for larger shipments to ensure secure and timely delivery.",
+                "inland-transportation": "Inland Transportation",
+                "inland-transportation-description": "Reliable transport solutions to move goods within the country by road or rail from ports to final destinations.",
+                "international-freight-forwarding": "International Freight Forwarding",
+                "international-freight-forwarding-description": "Comprehensive freight forwarding services that manage and coordinate the global transport of your goods.",
+                "contactservive": "Contact",
+
+                our_article: "Our Article",
+                read_article_info: "Read our article for more information.",
+                article_01: "01. Green Logistics",
+                article_02: "02. Digital Logistics Management in the Digital Age",
+                article_03: "03. The Importance of Logistics in E-Commerce",
+                article_04: "04. Inventory Management in Logistics",
+                sustainable_transport_title: "Developing Sustainable and Environmentally Friendly Transportation Methods",
+                sustainable_transport_desc: "Today, green logistics has garnered significant attention from both consumers and businesses due to the substantial environmental impact caused by the growth of trade and transportation.",
+                design_approach: "Design Approach",
+                green_logistics: "Green Logistics",
+                project_management: "Project Management",
+                read_more: "Read More",
+                tech_logistics_title: "Analyzing the Role of Technology in Logistics",
+                tech_logistics_desc: "In an era where digital technology plays a crucial role in every aspect of business, logistics is no exception. Modern logistics management relies on technology to enhance operational efficiency and respond swiftly to customer demands.",
+                innovative_solutions: "Innovative Solutions",
+                ecommerce_logistics_title: "Exploring How the Growth of E-Commerce Affects the Demand for Logistics Services",
+                ecommerce_logistics_desc: "In an era where E-commerce is rapidly growing, this transformation not only impacts consumer purchasing behavior but also profoundly affects the logistics industry. Logistics has become a critical factor that enables E-commerce businesses to meet customer demands efficiently.",
+                consumer_behavior: "Consumer Behavior",
+                logistics_ecommerce: "Logistics in E-Commerce",
+                inventory_management_title: "Strategies for Inventory Control",
+                inventory_management_desc: "Inventory management is one of the most critical activities in logistics, as it directly impacts operational efficiency and customer satisfaction. Effective inventory management can help reduce costs, increase responsiveness to orders, and minimize issues related to stockouts or excess inventory.",
+                effective_inventory: "Effective Inventory Control",
+                enhance_efficiency: "Enhance Efficiency",
+
+
+                staff_title: "Staff Members",
+                staff_subtitle: "We are experience staff team for your transport",
+                name_yot: "YOT JIRAPACHOTEHIRUN",
+                name_suwanna: "Suwanna Jirapachotehirun",
+                name_passavee: "Passavee Tipmontree",
+                name_jinjade: "Jinjade Jirapachotehirun",
+                name_danuda: "Danuda Nakprasert",
+                role_md: "Managing Director",
+                role_gm: "General Manager",
+                role_branch_mgr: "Branch Office Manager",
+                role_sale_rep: "Sale Representative",
+                role_sales_mgr: "Sales Manager",
+
+                customer_title: "Our Customer",
+                customer_subtitle: "Thousands of customers who trust us and our services",
+                testimonial_1: "Whether it's large shipments or small parcels, they handle everything with great care and organization. The seamless process and excellent customer service make them my go-to choice for logistics.",
+                testimonial_2: "The tracking system is precise, and the staff ensures everything arrives on time and in perfect condition. Their consistent reliability makes them a preferred choice for my shipping needs.",
+                testimonial_3: "Providing clear and prompt responses to all my queries. Their dedication to ensuring a smooth experience is truly commendable. I’ll definitely use their services again in the future.",
+                customer_1: "Customer A",
+                customer_2: "Customer C",
+                customer_3: "Customer B",
+                testimonial_1_role: "Good Service.",
+                testimonial_2_role: "Excellent Experience.",
+                testimonial_3_role: "Great Choice",
+
+
+                "footer-address": "Address",
+                "footer-address-text": "445/3 Phetchaburi Road, Phayathai, Rajtavee, Bangkok 10400",
+                "footer-phone": "+662 215 1769",
+                "footer-email": "admin@empireglobal.co.th",
+                "footer-services": "Services",
+                "footer-service-1": "NVOCC Consolidation",
+                "footer-service-2": "Customs Clearance",
+                "footer-service-3": "LCL (Less than Container load)",
+                "footer-service-4": "FCL (Full Container load)",
+                "footer-service-5": "Inland Transportation",
+                "footer-service-6": "International Freight Forwarding",
+                "footer-service-7": "Door to door Service",
+                "footer-service-8": "Industrial Packaging and Removal",
+                "footer-service-9": "Project Handling and Marine Insurance",
+                "footer-service-10": "Cross Border",
+                "footer-service-11": "Air Freight",
+                "footer-show-more": "Show More",
+                "footer-quick-links": "Quick Links",
+                "footer-faq": "Frequency Question",
+                "footer-download": "Download",
+                "footer-terms": "Terms & Condition",
+                "footer-newsletter": "Newsletter",
+                "footer-newsletter-text": "Receive news from us.",
+                "footer-signup": "SignUp",
+                "footer-policy": "Privacy Policy"
+
+
+
+            },
+            th: {
+                home: "หน้าแรก",
+                article: "บทความ",
+                about: "เกี่ยวกับเรา",
+                services: "บริการ",
+                download: "ดาวน์โหลด",
+                contact: "ติดต่อเรา",
+                policy: "นโยบาย",
+
+
+                cookieBanner: "เว็บไซต์นี้ใช้คุกกี้ในการติดตามพฤติกรรมของผู้ใช้และปรับปรุงประสบการณ์ของคุณ กรุณาเลือกว่าคุณยินยอมให้ใช้คุกกี้เพื่อการติดตามและปรับปรุงข้อมูลหรือไม่ คุณสามารถดูนโยบายคุกกี้ของเราได้ที่นี่ ",
+                "accept-cookies": "ยอมรับ",
+                "decline-cookies": "ปฏิเสธ",
+                "link-cookie": "นโยบายคุกกี้",
+
+
+                subtitle1: "ผู้ช่วยแก้ปัญหาด้านการขนส่งและโลจิสติกส์",
+                title1: "ผู้นำด้านการขนส่งระหว่างประเทศ",
+                description1: 'ให้ความช่วยเหลือด้านระบบโลจิสติกส์แบบไร้พรมแดน ช่วยคุณวางแผนสำหรับการขนส่งระหว่างประเทศอย่างมีประสิทธิภาพ',
+                button1: "บริการของเรา",
+
+                subtitle2: "เสริมพลังธุรกิจของคุณด้วยระบบโลจิสติกส์ที่แม่นยำขึ้น",
+                title2: "ก้าวใหม่สู่อนาคตของซัพพลายเชน",
+                description2: "สำรวจแนวโน้มสำคัญในอุตสาหกรรมการขนส่ง เสนอแนวทางการดำเนินงานอย่างเหมาะสมกับธุรกิจของคุณ",
+                button2: "บริการของเรา",
+
+                title3: "จับตาทิศทางใหม่ในการขนส่งสินค้า",
+                description3: "เราร่วมมืออย่างใกล้ชิดกับลูกค้าของเรา เพื่อพัฒนาวิธีแก้ปัญหาให้ตอบโจทย์ความต้องการเฉพาะทางของแต่ละธุรกิจ",
+
+
+                cap1: "     ฝ่าทุกความท้าทายของการจัดส่ง",
+                cap2: "     ระบบจัดส่งอัจฉริยะ",
+                cap3: "     จัดส่งสินค้าแบบไร้พรมแดน",
+
+                "our-history": "ประวัติของเรา",
+                "trusted-logistics-company": "เราเป็นบริษัทขนส่งที่ได้รับความไว้วางใจตั้งแต่ปี 2010",
+                "company-setup": "เราเริ่มต้นโดยกลุ่มคนที่มีประสบการณ์สูงด้านธุรกิจการขนส่ง ซึ่งทำธุรกิจจัดส่งสินค้ามานานกว่า 10 ปี",
+                "cross-border-logistics": "โลจิสติกส์ข้ามพรมแดน",
+                "cross-border-description": "ทีมของเราทำงานร่วมกับบริษัทขนส่งทั่วโลก มอบราคาค่าขนส่งทางอากาศและทางทะเลที่เหมาะสม พร้อมบริการขนส่งสินค้าไปยังจุดหมายที่คุณต้องการ",
+                "navigating-new-normal": "การขนส่งสินค้ายุคใหม่",
+                "navigating-description": "เราเติบโตขึ้นจนกลายเป็นผู้ให้บริการแก้ปัญหาด้านโลจิสติกส์ชั้นนำในประเทศไทย โดยมุ่งเน้นที่ความพึงพอใจของลูกค้าและการเป็นบริษัทขนส่งสินค้าชั้นนำ",
+                "partners-leading-companies": "พันธมิตรกับบริษัทชั้นนำทั่วโลก",
+                "partners-description": "Grand Dragon Logistics Co., Ltd. เป็นบริษัทซึ่งให้บริการนำเข้า/ส่งออกที่มีการให้บริการทั้งในและต่างประเทศ",
+                "about-image": "ภาพเกี่ยวกับเรา",
+                "cargo-image": "ภาพสินค้า",
+
+                "our-partner": "พันธมิตรของเรา",
+                "global-network": "เครือข่ายทั่วโลก",
+                "empire-global-logistics-description": "ที่ Grand Dragon Logistics เราเข้าใจถึงความต้องการของตลาดโลกในปัจจุบัน ทีมงานที่มีประสบการณ์มากกว่า 10 ปีในสาขาโลจิสติกส์ของเราพร้อมให้บริการขนส่งที่เป็นนวัตกรรมใหม่ซึ่งรวมถึงการขนส่งทางอากาศและทางทะเล, บริการด้านศุลกากร, และแก้ปัญหาการขนส่งเฉพาะด้านสำหรับทุกธุรกิจ",
+
+                "innovative-transportation-services": "บริการขนส่งที่ทันสมัยสำหรับตลาดระดับโลก",
+                "empire-global-logistics-description2": "ที่ Grand Dragon Logistics เราเข้าใจถึงความซับซ้อนของสถานการณ์ตลาดโลกยุคใหม้ ด้วยความร่วมมืออันแข็งแกร่งกับพันธมิตรทางธุรกิจของเรา เราสามารถให้บริการด้านโลจิสติกส์อย่างครบวงจรเพื่อตอบโจทย์ความต้องการเฉพาะของลูกค้าแต่ละรายได้อย่างแม่นยำ",
+                "years-working-experience": "ประสบการณ์ธุรกิจ",
+                "leading-logistics-solution-providers": "เราได้เติบโตขึ้นเป็นหนึ่งในผู้ให้บริการแก้ปัญหาโลจิสติกส์ชั้นนำในประเทศไทย โดยมุ่งเน้นที่ความพึงพอใจของลูกค้าและการเป็นบริษัทขนส่งสินค้าชั้นนำ",
+
+
+                header: "รวบรวมบริการขนส่งที่ทันสมัยสำหรับโลกปัจจุบัน",
+                globalCoverage: "ครอบคลุมทั่วโลก",
+                globalCoverageDesc: "ด้วยประสบการณ์กว่า 10 ปี เราร่วมมือกับลูกค้าอย่างใกล้ชิดเพื่อให้บริการที่เหมาะสมตามความต้องการเฉพาะของลูกค้า",
+                onTimeDelivery: "จัดส่งตรงเวลา",
+                onTimeDeliveryDesc: "เรารับประกันว่าผลิตภัณฑ์ของคุณจะถึงจุดหมายปลายทางตรงเวลาและอยู่ภายในงบประมาณที่คุณต้องการ",
+                aboutDesc: "ที่ Grand Dragon Logistics เราเข้าใจความต้องการของตลาดโลกในปัจจุบัน ทีมงานของเรามีประสบการณ์มากกว่าสิบปีในวงการขนส่ง เรามีบริการขนส่งที่ทันสมัยรวมถึงการขนส่งทางอากาศและทางทะเล รวมถึงการเป็นตัวแทนศุลกากรและบริการจัดส่งอีกหลายแบบตามที่คุณต้องการ",
+                globalNetwork: "เครือข่ายทั่วโลก",
+                networkDesc: "Grand Dragon Logistics Co.,Ltd. เป็นสมาชิกของเครือข่าย WLA, WPA network และ JCtrans Premium มีตัวแทนทั่วโลก โดย WLA Global network, WPA network และ JCtrans Premium เป็นหนึ่งในเครือข่ายที่ใหญ่ที่สุดของธุรกิจการขนส่งทางอากาศ ทางทะเล และการขนส่งภาคพื้น",
+                excellentMananger: "การจัดการที่มีประสิทธิภาพ",
+                excellentManangerDesc: "วิเคราะห์ความซับซ้อนของโลจิสติกส์ข้ามพรมแดน โดยเน้นที่อุปสรรคด้านกฎหมาย เพื่อให้การขนส่งระหว่างประเทศมีประสิทธิภาพ",
+
+                ourObjective: "เป้าหมายของเรา",
+                empoweringBusinesses: "เพิ่มศักยภาพให้ธุรกิจด้วยการระบบการขนส่งครบวงจร",
+                objectiveDescription: "เรามีทีมงานผู้เชี่ยวชาญด้านโลจิสติกส์ซึ่งมีประสบการณ์มากกว่า 10 ปีในอุตสาหกรรมการขนส่ง เชี่ยวชาญในการส่งต่อสินค้าข้ามพรมแดนและการเป็นตัวแทนศุลกากร เรามีอัตราค่าขนส่งทางอากาศและทางทะเลที่เหมาะสมพร้อมการปฏิบัติตามกฎระเบียบระหว่างประเทศ สร้างประสบการณ์ด้านโลจิสติกส์ที่ราบรื่นและไร้กังวลสำหรับคุณ",
+
+                ourHistory: "ประวัติของเรา",
+                trustedLogistics: "เราเป็นบริษัทโลจิสติกส์ที่ได้รับความไว้วางใจเป็นอย่างสูง โดยก่อตั้งมาตั้งแต่ปี ค.ศ. 2010",
+                crossBorderLogistics: "การขนส่งข้ามพรมแดน",
+                crossBorderDesc: "เราก่อตั้งขึ้นโดยกลุ่มผู้มีประสบการณ์สูงที่อยู่ในธุรกิจการขนส่งสินค้ามานานกว่า 10 ปี กลุ่มของเราทำงานร่วมกับบริษัทขนส่งสินค้าและศุลกากร โดยเสนออัตราค่าขนส่งทางอากาศและทางทะเลที่เหมาะสมและให้บริการขนส่งทั่วโลก",
+                navigatingNewNormal: "ระบบขนส่งที่เหมาะสมกับ New normal",
+                newNormalDesc: "เราเติบโตขึ้นจนเป็นหนึ่งในผู้ให้บริการด้านโลจิสติกส์ชั้นนำในประเทศไทย โดยมุ่งเน้นที่ความพึงพอใจของลูกค้าจนเป็นหนึ่งในบริษัทขนส่งสินค้าชั้นนำ",
+                supplyChainTransparency: "พันธมิตรกับบริษัทชั้นนำทั่วโลก",
+                transparencyDesc: "Grand Dragon Logistics Co., Ltd. เป็นบริษัทซึ่งให้บริการนำเข้า/ส่งออกที่มีการให้บริการทั้งในและต่างประเทศ",
+
+                "our-services": "บริการของเรา",
+                "explore-our-services": "สำรวจบริการของเรา",
+                "nvocc-consolidation": "NVOCC Consolidation",
+                "nvocc-consolidation-description": "บริการที่เสนอการรวมสินค้า Non-Vessel Operating Common Carrier (NVOCC) เพื่อรวมการจัดส่งขนาดเล็กให้เป็นหนึ่งเดียว ช่วยลดต้นทุนและทำให้การขนส่งระหว่างประเทศง่ายขึ้น",
+                "customs-clearance": "การเคลียร์พิธีการศุลกากร",
+                "customs-clearance-description": "การจัดการพิธีการศุลกากรอย่างเชี่ยวชาญเพื่อให้แน่ใจว่าสินค้าของคุณเป็นไปตามข้อกำหนดทั้งหมด และการขนส่งข้ามพรมแดนเป็นไปอย่างราบรื่นและถูกต้องตามกฎหมาย",
+                "lcl-service": "LCL (การบรรทุกตู้คอนเทนเนอร์ที่ไม่เต็ม)",
+                "lcl-service-description": "การขนส่งสินค้าที่ไม่ต้องใช้ตู้คอนเทนเนอร์เต็ม สามารถประหยัดค่าใช้จ่ายโดยการใช้พื้นที่ร่วมในตู้คอนเทนเนอร์",
+                "fcl-service": "FCL (การบรรทุกตู้คอนเทนเนอร์เต็ม)",
+                "fcl-service-description": "การขนส่งสินค้าด้วยตู้คอนเทนเนอร์เต็ม เพื่อให้การจัดส่งสินค้าขนาดใหญ่มีความปลอดภัยและตรงเวลามากขึ้น",
+                "inland-transportation": "การขนส่งภายในประเทศ",
+                "inland-transportation-description": "บริการขนส่งสินค้าภายในประเทศโดยทางถนนหรือทางรถไฟจากท่าเรือไปยังจุดหมายปลายทาง",
+                "international-freight-forwarding": "การขนส่งสินค้าระหว่างประเทศ",
+                "international-freight-forwarding-description": "บริการการขนส่งสินค้าระหว่างประเทศที่ดูแลและประสานงานการขนส่งสินค้าของคุณทั่วโลก",
+                "contactservice": "ติดต่อเรา",
+
+
+                our_article: "บทความของเรา",
+                read_article_info: "อ่านบทความของเราเพื่อข้อมูลเพิ่มเติม",
+                article_01: "01. โลจิสติกส์สีเขียว",
+                article_02: "02. การจัดการโลจิสติกส์ในยุคดิจิทัล",
+                article_03: "03. ความสำคัญของโลจิสติกส์ใน E-Commerce",
+                article_04: "04. การจัดการสินค้าคงคลังในโลจิสติกส์",
+                sustainable_transport_title: "การพัฒนารูปแบบการขนส่งที่ยั่งยืนและเป็นมิตรกับสิ่งแวดล้อม",
+                sustainable_transport_desc: "ปัจจุบัน โลจิสติกส์สีเขียวได้รับความสนใจอย่างมากจากทั้งผู้บริโภคและภาคธุรกิจ เนื่องจากผลกระทบต่อสิ่งแวดล้อมที่เกิดจากการเติบโตของการค้าและการขนส่ง",
+                design_approach: "แนวทางการออกแบบ",
+                green_logistics: "โลจิสติกส์สีเขียว",
+                project_management: "การจัดการโครงการ",
+                read_more: "อ่านเพิ่มเติม",
+                tech_logistics_title: "บทบาทของเทคโนโลยีในโลจิสติกส์",
+                tech_logistics_desc: "ในยุคที่เทคโนโลยีดิจิทัลมีบทบาทสำคัญในทุกแง่มุมของธุรกิจ โลจิสติกส์ก็เช่นกัน การจัดการโลจิสติกส์สมัยใหม่พึ่งพาเทคโนโลยีเพื่อเพิ่มประสิทธิภาพและตอบสนองความต้องการของลูกค้าอย่างรวดเร็ว",
+                innovative_solutions: "แนวทางใหม่ๆ",
+                ecommerce_logistics_title: "ผลของการเติบโตของ E-Commerce ต่อความต้องการบริการโลจิสติกส์",
+                ecommerce_logistics_desc: "ในยุคที่ E-Commerce เติบโตอย่างรวดเร็ว การเปลี่ยนแปลงนี้ไม่เพียงส่งผลต่อพฤติกรรมการซื้อของผู้บริโภค แต่ยังส่งผลต่ออุตสาหกรรมโลจิสติกส์อย่างลึกซึ้ง",
+                consumer_behavior: "พฤติกรรมผู้บริโภค",
+                logistics_ecommerce: "โลจิสติกส์ใน E-Commerce",
+                inventory_management_title: "กลยุทธ์การควบคุมสินค้าคงคลัง",
+                inventory_management_desc: "การจัดการสินค้าคงคลังเป็นหนึ่งในกิจกรรมที่สำคัญที่สุดในโลจิสติกส์ เพราะมีผลต่อประสิทธิภาพการดำเนินงานและความพึงพอใจของลูกค้า",
+                effective_inventory: "การควบคุมสินค้าคงคลังที่มีประสิทธิภาพ",
+                enhance_efficiency: "เพิ่มประสิทธิภาพ",
+
+                staff_title: "ทีมงาน",
+                staff_subtitle: "เราคือทีมงานมืออาชีพเพื่อการขนส่งของคุณ",
+                name_yot: "ยศ จิรภาโชติหิรัญ",
+                name_suwanna: "สุวรรณา จิรภาโชติหิรัญ",
+                name_passavee: "ภาสวี ทิพย์มนตรี",
+                name_jinjade: "จิณเจษฏ์ จิรภาโชติหิรัญ",
+                name_danuda: "ดนุดา นาคประเสริฐ",
+                role_md: "ผู้อำนวยการฝ่ายบริหาร",
+                role_gm: "ผู้จัดการทั่วไป",
+                role_branch_mgr: "ผู้จัดการฝ่ายที่ปรึกษาต่างประเทศ",
+                role_sale_rep: "เจ้าหน้าที่ฝ่ายขาย",
+                role_sales_mgr: "ผู้จัดการฝ่ายขาย",
+
+                customer_title: "ลูกค้าของเรา",
+                customer_subtitle: "รีวิวจากผู้ใช้ที่วางใจในบริการของเรา",
+                testimonial_1: "ไม่ว่าการขนส่งขนาดใหญ่หรือพัสดุขนาดเล็ก บริษัทดูแลทุกอย่างด้วยความระมัดระวังและการจัดการที่ดี กระบวนการที่ราบรื่นและการบริการลูกค้าที่ดีเยี่ยมทำให้พวกเขากลายเป็นตัวเลือกแรกในการขนส่งของฉัน",
+                testimonial_2: "ระบบติดตามของพวกเขามีความแม่นยำและพนักงานทำให้มั่นใจว่าทุกอย่างมาถึงตรงเวลาและอยู่ในสภาพที่สมบูรณ์ ความน่าเชื่อถือที่สม่ำเสมอทำให้พวกเขากลายเป็นตัวเลือกที่ดีมากในการขนส่งของฉัน",
+                testimonial_3: "ให้คำตอบที่ชัดเจนและรวดเร็วกับคำถามของฉันทุกคำถาม ความมุ่งมั่นในการให้บริการที่ราบรื่นนั้นน่าชื่นชมจริงๆ ฉันจะใช้บริการของพวกเขาอีกครั้งในอนาคต",
+                customer_1: "ลูกค้า A",
+                customer_2: "ลูกค้า C",
+                customer_3: "ลูกค้า B",
+                testimonial_1_role: "บริการที่ดี",
+                testimonial_2_role: "ประสบการณ์ยอดเยี่ยม",
+                testimonial_3_role: "ตัวเลือกที่ยอดเยี่ยม",
+
+                "footer-address": "ติดต่อเรา",
+                "footer-address-text": "445/3 ถนนเพชรบุรี, พญาไท, ราชเทวี, กรุงเทพฯ 10400",
+                "footer-phone": "+662 215 1769",
+                "footer-email": "admin@empireglobal.co.th",
+                "footer-services": "บริการ",
+                "footer-service-1": "การรวม NVOCC",
+                "footer-service-2": "การทำพิธีศุลกากร",
+                "footer-service-3": "LCL (น้อยกว่าการโหลดตู้)",
+                "footer-service-4": "FCL (เต็มตู้คอนเทนเนอร์)",
+                "footer-service-5": "การขนส่งทางบก",
+                "footer-service-6": "การขนส่งทางเรือระหว่างประเทศ",
+                "footer-service-7": "บริการประตูถึงประตู",
+                "footer-service-8": "การบรรจุและการขนย้ายอุตสาหกรรม",
+                "footer-service-9": "การจัดการโครงการและประกันภัยทางทะเล",
+                "footer-service-10": "ข้ามพรมแดน",
+                "footer-service-11": "การขนส่งทางอากาศ",
+                "footer-show-more": "แสดงเพิ่มเติม",
+                "footer-quick-links": "ควิกลิงก์",
+                "footer-faq": "คำถามที่พบบ่อย",
+                "footer-download": "ดาวน์โหลด",
+                "footer-terms": "ข้อกำหนดและเงื่อนไข",
+                "footer-newsletter": "ข่าวสาร",
+                "footer-newsletter-text": "รับข่าวสารจากเรา",
+                "footer-signup": "สมัครสมาชิก",
+                "footer-policy": "นโยบายความเป็นส่วนตัว"
+
+
+            },
+
+
+
+
+
+        };
+
+        function changeLanguage(lang) {
+            const languageData = translations[lang];
+            document.querySelectorAll("[data-translate]").forEach(element => {
+                const key = element.getAttribute("data-translate");
+                element.textContent = languageData[key];
+            });
+            localStorage.setItem("language", lang);
+            setFontBasedOnLanguage(lang);
+        }
+
+        function setFontBasedOnLanguage(lang) {
+            document.body.setAttribute("data-lang", lang); // Add lang attribute to body
+
+            const logoContainer = document.querySelector('.logo-container');
+            const navbar = document.querySelector('#navbarNav');
+
+            if (lang === 'th') {
+                document.body.style.fontFamily = 'Prompt, sans-serif'; // Thai font
+
+                if (navbar) {
+                    navbar.classList.remove('navbar-inter'); // Remove Inter font from navbar
+                }
+
+                if (window.innerWidth >= 992 && logoContainer) {
+                    logoContainer.style.transform = 'translateX(-51%)';
+                }
+            } else {
+                document.body.style.fontFamily = 'Roboto, sans-serif'; // Default English font
+
+                if (navbar) {
+                    navbar.classList.add('navbar-inter'); // Add Inter font only for navbar
+                }
+
+                if (window.innerWidth >= 992 && logoContainer) {
+                    logoContainer.style.transform = 'translateX(-53%)';
+                }
+            }
+        }
+
+        window.addEventListener("load", () => {
+            const savedLanguage = localStorage.getItem("language") || "en";
+            changeLanguage(savedLanguage);
+        });
+
+        (function () {
+            const originalSetItem = localStorage.setItem;
+
+            // Override localStorage.setItem
+            localStorage.setItem = function (key, value) {
+                // Skip blocking storage for cookie consent keys
+                if (key === "cookieConsent" || key === "cookieConsentTimestamp") {
+                    originalSetItem.apply(this, arguments); // Allow saving these keys
+                } else {
+                    const cookieConsent = localStorage.getItem("cookieConsent"); // Check cookie consent
+                    if (cookieConsent === "accepted") {
+                        originalSetItem.apply(this, arguments); // Only store if cookies are accepted
+                    }
+                }
+            };
+        })();
+
+
+        // Cookie consent logic
+        window.addEventListener("DOMContentLoaded", () => {
+            const cookieConsent = localStorage.getItem("cookieConsent");
+
+            // Show cookie banner if no consent is found
+            if (!cookieConsent) {
+                const banner = document.getElementById("cookie-consent-banner");
+                banner.style.display = "block"; // Display the banner
+            }
+
+            // Accept cookies
+            document.getElementById("accept-cookies").addEventListener("click", () => {
+                localStorage.setItem("cookieConsent", "accepted");
+                document.getElementById("cookie-consent-banner").style.display = "none";
+            });
+
+            // Decline cookies
+            document.getElementById("decline-cookies").addEventListener("click", () => {
+                localStorage.setItem("cookieConsent", "declined");
+                document.getElementById("cookie-consent-banner").style.display = "none";
+                localStorage.clear(); // Clear all data if cookies are declined
+            });
+        });
+    </script>
+
+    <script>
+        function toggleServices() {
+            var extraServices = document.getElementById("extra-services");
+            var button = document.getElementById("show-more");
+
+            if (extraServices.style.display === "none" || extraServices.style.display === "") {
+                extraServices.style.display = "block"; // Show extra services
+                button.innerHTML = "Show Less"; // Change text to "Show Less"
+            } else {
+                extraServices.style.display = "none"; // Hide extra services
+                button.innerHTML = "Show More"; // Change text to "Show More"
+            }
+        }
+    </script>
+
+    <!-- JavaScript Logic -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const cookieBanner = document.getElementById('cookie-consent-banner');
+            const acceptCookiesButton = document.getElementById('accept-cookies');
+            const declineCookiesButton = document.getElementById('decline-cookies');
+            const COOKIE_EXPIRY_DAYS = 30; // Expiry time in days
+
+            // Check if the user has already made a choice
+            let cookieConsent = localStorage.getItem('cookieConsent');
+            let cookieTimestamp = localStorage.getItem('cookieConsentTimestamp');
+
+            if (cookieConsent && cookieTimestamp) {
+                const now = new Date().getTime();
+                const consentAge = (now - parseInt(cookieTimestamp, 10)) / (1000 * 60 * 60 * 24); // Age in days
+
+                console.log('Consent Age:', consentAge); // Debug log (1000 * 60 * 60 * 24)
+
+                if (consentAge <= COOKIE_EXPIRY_DAYS) {
+                    console.log('Consent is valid, hiding banner'); // Debug log
+                    cookieBanner.style.display = 'none';
+
+                    if (cookieConsent === 'accepted') {
+                        enableTracking(); // Enable tracking if consent was given
+                    } else {
+                        disableTracking(); // Disable tracking if consent was denied
+                    }
+                } else {
+                    console.log('Consent has expired, clearing and showing banner'); // Debug log
+                    localStorage.removeItem('cookieConsent');
+                    localStorage.removeItem('cookieConsentTimestamp');
+                    cookieBanner.style.display = 'block';
+                }
+            } else {
+                console.log('No valid consent saved, showing banner'); // Debug log
+                cookieBanner.style.display = 'block';
+            }
+
+            // Handle "Accept" button click
+            acceptCookiesButton.addEventListener('click', function () {
+                const now = new Date().getTime();
+                console.log('Accept button clicked');
+                localStorage.setItem('cookieConsent', 'accepted');
+                localStorage.setItem('cookieConsentTimestamp', now);
+                console.log('cookieConsent set to accepted');
+                cookieBanner.style.display = 'none';
+                enableTracking();
+            });
+
+            // Handle "Decline" button click
+            declineCookiesButton.addEventListener('click', function () {
+                const now = new Date().getTime();
+                console.log('Decline button clicked');
+                localStorage.setItem('cookieConsent', 'declined');
+                localStorage.setItem('cookieConsentTimestamp', now);
+                console.log('cookieConsent set to declined');
+                cookieBanner.style.display = 'none';
+                disableTracking();
+            });
+        });
+
+        // Function to enable tracking (e.g., Google Analytics and custom tracking)
+        function enableTracking() {
+            console.log('Tracking enabled.');
+
+
+
+            // Custom Tracking
+            async function trackUserVisit() {
+                try {
+                    // Get device and browser info
+                    const userAgent = navigator.userAgent;
+                    const device = /Mobi|Android/i.test(userAgent) ? 'Mobile' : 'Desktop';
+                    const browser = (() => {
+                        if (userAgent.includes("Firefox")) return "Firefox";
+                        if (userAgent.includes("Chrome")) return "Chrome";
+                        if (userAgent.includes("Safari")) return "Safari";
+                        return "Unknown";
+                    })();
+
+                    // Get the user's IP address using an external API
+                    const ipResponse = await fetch('https://api.ipify.org?format=json');
+                    const {
+                        ip
+                    } = await ipResponse.json();
+
+                    // Ensure IP is available before sending data
+                    if (ip) {
+                        // Send data to the backend (track.php)
+                        const response = await fetch('track.php', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify({
+                                ip,
+                                device,
+                                browser
+                            }),
+                        });
+
+                        const result = await response.json();
+                        if (response.ok) {
+                            console.log('User visit tracked:', result.message); // Handle success
+                        } else {
+                            console.error('Error tracking visit:', result.error);
+                        }
+                    } else {
+                        console.error('IP address could not be retrieved.');
+                    }
+                } catch (error) {
+                    console.error('Error tracking user:', error);
+                }
+            }
+
+            // Track user on page load
+            trackUserVisit();
+        }
+
+        // Function to disable tracking (e.g., block Google Analytics and custom tracking)
+        function disableTracking() {
+            console.log('Tracking disabled.');
+
+
+        }
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (window.innerWidth >= 768) { // หน้าจอใหญ่กว่า 768px = desktop/tablet
+                document.querySelectorAll(".carousel-video").forEach(function (video) {
+                    const source = document.createElement("source");
+                    source.src = video.getAttribute("data-src");
+                    source.type = "video/mp4";
+                    video.appendChild(source);
+                    video.load();
+                });
+            }
+        });
+    </script>
+
+
+</body>
+
+</html>
